@@ -3,7 +3,7 @@ const emailError = document.getElementById("email-error");
 const btn = document.getElementById("btn");
 const form = document.getElementById("form");
 
-const success = document.getElementById("success");
+const success = document.getElementById("success-main");
 const subscribe = document.getElementById("main-container");
 const successEmail = document.getElementById("success-email");
 
