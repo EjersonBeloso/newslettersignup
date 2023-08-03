@@ -3,6 +3,10 @@ const emailError = document.getElementById("email-error");
 const btn = document.getElementById("btn");
 const form = document.getElementById("form");
 
+const success = document.getElementById("success");
+const subscribe = document.getElementById("main-container");
+const successEmail = document.getElementById("success-email");
+
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
@@ -17,14 +21,21 @@ const isValidEmail = (email) => {
 };
 
 const validateInputs = () => {
+	let email = [];
 	const emailValue = emailField.value;
-	console.log(emailField);
+	email.push(emailValue);
+	console.log(email);
 
 	if (!isValidEmail(emailValue)) {
 		emailError.innerText = "Valid email required";
 		emailError.style.color = "red";
 		emailField.style.borderColor = "red";
 	} else {
-		location.replace("/success.html");
+		success.classList.add("show");
+		success.classList.remove("hide");
+
+		subscribe.classList.add("hide");
+		successEmail.innerHTML = emailValue;
+		successEmail.style.fontWeight = "800";
 	}
 };

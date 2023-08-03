@@ -18,74 +18,90 @@
 		</title>
 	</head>
 	<body>
-		<main>
-			<section class="illustration-section">
-				<picture>
-					<source
-						srcset="./assets/images/illustration-sign-up-desktop.svg"
-						media="(min-width: 765px)"
-					/>
-					<img
-						class="illustration-img"
-						src="./assets/images/illustration-sign-up-mobile.svg"
-						alt="illustration-sign-up-mobile"
-					/>
-				</picture>
-			</section>
-			<section class="content-section">
-				<div class="heading">
-					<h1>Stay updated!</h1>
-
-					<p>Join 60,000+ product managers receiving monthly updates on:</p>
-				</div>
-
-				<div class="list-feature">
-					<div>
-						<img src="./assets/images/icon-list.svg" alt="icon-list-svg" />
-						<p>Product discovery and building what matters</p>
-					</div>
-					<div>
-						<img src="./assets/images/icon-list.svg" alt="icon-list-svg" />
-						<p>Measuring to ensure updates are a success</p>
-					</div>
-					<div>
-						<img src="./assets/images/icon-list.svg" alt="icon-list-svg" />
-						<p>And much more!</p>
-					</div>
-				</div>
-				<div class="form-section">
-					<form id="form" action="/success">
-						<div class="error-container">
-							<label for="email">Email address</label>
-							<span id="email-error"></span>
-						</div>
-
-						<input
-							type="email"
-							id="email-field"
-							placeholder="email@company.com"
+		<main id="main-container">
+			<section id="subscribe">
+				<div class="illustration-section">
+					<picture>
+						<source
+							srcset="./assets/images/illustration-sign-up-desktop.svg"
+							media="(min-width: 765px)"
 						/>
-						<button type="submit" id="btn">
-							Subscribe to monthly newsletter
-						</button>
-					</form>
+						<img
+							class="illustration-img"
+							src="./assets/images/illustration-sign-up-mobile.svg"
+							alt="illustration-sign-up-mobile"
+						/>
+					</picture>
 				</div>
-				<!-- <div class="attribution">
-					Challenge by
-					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-						>Frontend Mentor</a
-					>. Coded by <a href="#">Ejerson Beloso</a>.
-				</div> -->
+				<div class="content-section">
+					<div class="heading">
+						<h1>Stay updated!</h1>
+
+						<p>Join 60,000+ product managers receiving monthly updates on:</p>
+					</div>
+
+					<div class="list-feature">
+						<div>
+							<img src="./assets/images/icon-list.svg" alt="icon-list-svg" />
+							<p>Product discovery and building what matters</p>
+						</div>
+						<div>
+							<img src="./assets/images/icon-list.svg" alt="icon-list-svg" />
+							<p>Measuring to ensure updates are a success</p>
+						</div>
+						<div>
+							<img src="./assets/images/icon-list.svg" alt="icon-list-svg" />
+							<p>And much more!</p>
+						</div>
+					</div>
+					<div class="form-section">
+						<form id="form" action="/success">
+							<div class="error-container">
+								<label for="email">Email address</label>
+								<span id="email-error"></span>
+							</div>
+
+							<input
+								type="email"
+								id="email-field"
+								placeholder="email@company.com"
+							/>
+							<button type="submit" id="btn">
+								Subscribe to monthly newsletter
+							</button>
+						</form>
+					</div>
+					<!-- <div class="attribution">
+						Challenge by
+						<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+							>Frontend Mentor</a
+						>. Coded by <a href="#">Ejerson Beloso</a>.
+					</div> -->
+				</div>
 			</section>
+
+			<!-- Success message -->
 		</main>
-
-		<!-- Success message start -->
-
-		<!-- Thanks for subscribing! A confirmation email has been sent to
-		ash@loremcompany.com. Please open it and click the button inside to confirm
-		your subscription. Dismiss message -->
-
-		<!-- Success message end -->
+		<div id="success-main">
+			<section id="success" class="hide">
+				<div class="success-container">
+					<img
+						class="success-icon"
+						src="./assets/images/icon-success.svg"
+						alt="success-icon"
+					/>
+					<h1>Thanks for subscribing!</h1>
+					<p id="sucess-msg">
+						A confirmation email has been sent to
+						<span id="success-email"></span>. Please open it and click the
+						button inside to confirm your subscription.
+					</p>
+				</div>
+				<div class="success-btn">
+					<button id="btn">Dismiss message</button>
+				</div>
+			</section>
+		</div>
 
 		<script src="./js/app.js"></script>
 	</body>
